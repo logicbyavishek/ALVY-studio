@@ -29,7 +29,7 @@ main{
     @include flexColumn(0rem);
     align-items: center;
     
-    section{
+    section.view1{
         width: 100%;
         @include flexColumn(1rem);        
         padding: 1rem;
@@ -74,11 +74,35 @@ main{
             }
         }
     }
+    section.view2{
+        @include flexColumn(2rem);
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+        margin: 1rem;
+        .top, .bottom{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        small{
+            opacity: 0.7;
+            font-size: 1rem;
+            letter-spacing: 0.15rem;
+            line-height: 1.2rem;
+        }
+        h2{
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-weight: 400;
+            text-align: center;
+        }
+    }
 }
 
-@media (min-width:1000px){
+@media (min-width:990px){
     main{
-        section{
+        section.view1{
             flex-direction: row;
             padding: 1rem;
 
@@ -99,6 +123,12 @@ main{
                         font-size: 1.3rem;
                     }
                 }
+            }
+        }
+        section.view2{
+            flex-direction: row;
+            h2{
+                font-size: 4rem;
             }
         }
     }
