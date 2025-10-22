@@ -98,6 +98,50 @@ main{
             text-align: center;
         }
     }
+    section.view3{
+        width: 100%;
+        @include flexColumn(1rem);        
+        padding: 1rem;
+
+        .top{
+            width: 100%;
+            img{
+                width: 100%;
+                border-radius: 0.7rem;
+            }
+        }
+
+        .bottom>p{
+                text-transform: uppercase;
+                font-size: 1rem;
+                font-weight: 700;
+                letter-spacing: 0.1vw;
+            }
+
+        .bottom{
+            background-color: rgb(34, 34, 34);
+            @include flexColumn(4rem);
+            padding: 1.9rem;
+            border-radius: 0.7rem;
+            .text{
+                    @include flexColumn(0.7rem);
+
+                h1{
+                    font-weight: 400;
+                    font-size: 2.7rem;
+                    text-transform: uppercase;
+                }
+
+                p{
+                    font-weight: 400;
+                    font-size: 1.5rem;
+                    opacity: 0.6;
+                    line-height: 1.5;
+                    column-count: 1;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width:990px){
@@ -129,6 +173,35 @@ main{
             flex-direction: row;
             h2{
                 font-size: 4rem;
+            }
+        }
+        section.view3{
+            flex-direction: row-reverse;
+            padding: 1rem;
+            .top, .bottom{
+                width: 50%;
+            }
+            .bottom>p{
+                letter-spacing: normal;
+                font-weight: 700;
+            }
+            .bottom{
+                justify-content: space-between;
+                padding: 3.5rem;
+
+                .text{
+                    gap: 1.5rem;
+                    h1{
+                        font-size: 3rem;
+                        font-weight: 400;
+                    }
+                    p{
+                        font-size: 1rem;
+                        column-count: 2;
+                        column-gap: 2rem;
+
+                    }
+                }
             }
         }
     }
