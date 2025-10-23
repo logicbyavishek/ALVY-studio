@@ -21,6 +21,46 @@ body{
     flex-direction: column;
     gap: $gap;
 }
+
+@mixin Cards($img:""){
+    width: 100%;
+            background-image: url($img);
+            aspect-ratio: 1/1;
+            background-size: cover;
+            border-radius: 0.7rem;
+
+            padding: 1rem;
+            @include flexColumn(0rem);
+            justify-content: space-between;
+
+            .icons , .bottom{
+                background-color: #a1a1a175;
+                backdrop-filter: blur(0.5rem);
+                border: 1px solid #c3c3c3;
+                padding: 0.5rem;
+            }
+            .top{
+                display: flex;
+                justify-content: flex-end;
+                gap: 1rem;
+            }
+            .icons{
+                    width: fit-content;
+                    border-radius: 50%;
+                    cursor: pointer;
+            }
+            
+            .bottom{
+                display: flex;
+                justify-content: space-between;
+                padding: 1.5rem 1rem;
+                border-radius: 0.7rem;
+                p{
+                    text-transform: uppercase;
+                }
+            }
+}
+
 section{
     max-width: 1950px;
 }
@@ -222,6 +262,20 @@ main{
             }
         }
     }
+    section.view6{
+        width: 100%;
+        @include flexColumn(2rem);        
+        padding: 1rem;
+        .card1{
+            @include Cards("./card1.webp");
+        }
+        .card2{
+            @include Cards("./card2.webp");
+        }
+        .card3{
+            @include Cards("./card3.webp");
+        }
+    }
 }
 
 @media (min-width:990px){
@@ -317,6 +371,9 @@ main{
             .top a{
                 display: block;
             }
+        }
+        section.view6{
+            flex-direction: row;;
         }
     }
 }
