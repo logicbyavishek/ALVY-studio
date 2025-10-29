@@ -338,6 +338,57 @@ main{
 
         
     }
+    section.view8{
+        width: 100%;
+        @include flexColumn(1rem);       
+        padding: 1rem;
+        .yellow{
+            padding: 2rem;
+            background-color: #CEBD63;
+            border-radius: 0.7rem;
+            color: #1a1a1a;
+            @include flexColumn(1rem);
+            .top{
+
+                p{
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    letter-spacing: 0.1rem;
+                    opacity: 0.8;
+                }
+                h1{
+                    font-size: 3rem;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+            }
+            .bottom{
+                
+                a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    background-color: #121212;
+                    font-weight: 700;
+                    padding: 1rem;
+                    border-radius: 0.7rem;
+                    cursor: pointer;
+                    word-spacing: 0.2rem;
+                    text-decoration: none;
+                    color: #c3c3c3;
+                    text-transform: uppercase;
+                    gap: 0.5rem;
+                    i{
+                        font-size: 1.2rem;
+                        font-weight: 100;
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (min-width:990px){
@@ -443,6 +494,31 @@ main{
             .top, .bottom{
                 width: 50%;
             }
+        }
+        section.view8{
+            .yellow{
+                flex-direction: row;
+                justify-content: space-around;
+                
+                .top{
+                    width: 70%;
+                    h1{
+                        font-size: 5rem;
+                        width: 75%;
+                        word-wrap: break-word;
+                    }
+                }
+                .bottom{
+                    
+                    a{
+                        
+                        width: 12rem;
+                        padding: 1rem;
+                        
+                    }
+                }
+            }
+            
         }
     }
 }
