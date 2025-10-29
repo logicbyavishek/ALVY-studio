@@ -389,6 +389,58 @@ main{
             }
         }
     }
+    section.view9{
+        width: 100%;
+        @include flexColumn(1rem);       
+        padding: 1rem;
+        .footer{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 30vw 1fr 35vw;
+            gap: 1rem;
+            overflow: hidden;
+            
+            .sec{
+                border-radius: 0.7rem;
+                padding: 2rem;
+                background-color: rgb(34, 34, 34);
+            }
+
+            .sec1{
+                @include flexColumn(1rem);
+                justify-content: space-between;
+                p{
+                    font-size: 1.5rem;
+                    letter-spacing: 0.25rem;
+                    font-weight: 400;
+                    opacity: 0.7;
+                }
+                .top{
+                    display: flex;
+                    gap: 1rem;
+                    
+                    .icons{
+                        font-size: 1.5rem;
+                        width: fit-content;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        background-color: #292929;
+                        backdrop-filter: blur(0.5rem);
+                        border: 1px solid #c3c3c3;
+                        padding: 1rem;
+                    }
+                }
+            }
+            .sec2{
+                
+            }
+            .sec3{
+                
+            }
+        }
+        
+        
+    }
 }
 
 @media (min-width:990px){
